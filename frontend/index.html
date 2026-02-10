@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefenderSim - AI-Powered Phishing Detection System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>DefenderSim</h1>
+                <p class="subtitle">AI-Powered Phishing Detection System</p>
+                <p class="tech-stack">6 Security Frameworks + Ollama LLM (Llama 3.2:3b) with RAG</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- System Architecture -->
+    <section class="architecture">
+        <div class="container">
+            <h2>System Architecture</h2>
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <h3>Multi-Framework Detection</h3>
+                    <p>6 security frameworks analyze email independently</p>
+                    <ul class="framework-list">
+                        <li>ML Classifier (Naive Bayes + TF-IDF)</li>
+                        <li>OWASP Top 10</li>
+                        <li>NIST Cybersecurity Framework</li>
+                        <li>ISO/IEC 27001</li>
+                        <li>Nessus Vulnerability Scanner</li>
+                        <li>OpenVAS Security Scanner</li>
+                    </ul>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <h3>Ollama LLM Analysis</h3>
+                    <p>Llama 3.2:3b synthesizes framework results using RAG</p>
+                    <ul class="framework-list">
+                        <li>Analyzes all framework scores</li>
+                        <li>References known phishing patterns</li>
+                        <li>Generates human-readable assessment</li>
+                        <li>Provides actionable recommendations</li>
+                    </ul>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <h3>Final Report</h3>
+                    <p>Comprehensive threat assessment for SOC analysts</p>
+                    <ul class="framework-list">
+                        <li>Risk level classification</li>
+                        <li>Confidence score</li>
+                        <li>Evidence and indicators</li>
+                        <li>Response recommendations</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="architecture-note">Ollama LLM acts as the intelligence layer that transforms raw security data into actionable insights</p>
+        </div>
+    </section>
+
+    <!-- Statistics Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <h2>Detection Performance Metrics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Emails</h3>
+                    <p class="stat-value">60</p>
+                    <p class="stat-label">Analyzed</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accuracy</h3>
+                    <p class="stat-value">93.3%</p>
+                    <p class="stat-label">56/60 Correct</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Precision</h3>
+                    <p class="stat-value">91.8%</p>
+                    <p class="stat-label">45/49 True Positives</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Recall</h3>
+                    <p class="stat-value">95.7%</p>
+                    <p class="stat-label">45/47 Detected</p>
+                </div>
+                <div class="stat-card">
+                    <h3>F1 Score</h3>
+                    <p class="stat-value">93.7%</p>
+                    <p class="stat-label">Balanced Performance</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Languages</h3>
+                    <p class="stat-value">3</p>
+                    <p class="stat-label">DE, EN, FR</p>
+                </div>
+            </div>
+
+            <!-- Visualization Charts -->
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Detection Accuracy</h3>
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Framework Comparison</h3>
+                    <canvas id="frameworkChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Analysis Section -->
+    <section class="email-analysis">
+        <div class="container">
+            <h2>Email Analysis Results (60 Multilingual Samples)</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All (60)</button>
+                <button class="filter-btn" data-filter="HIGH">High Risk (38)</button>
+                <button class="filter-btn" data-filter="MEDIUM">Medium Risk (14)</button>
+                <button class="filter-btn" data-filter="LOW">Low Risk (8)</button>
+                <button class="filter-btn" data-filter="de">German (24)</button>
+                <button class="filter-btn" data-filter="en">English (24)</button>
+                <button class="filter-btn" data-filter="fr">French (12)</button>
+            </div>
+
+            <!-- Email Grid -->
+            <div class="email-grid" id="emailGrid">
+                <!-- Emails will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Detail Modal -->
+    <div class="modal" id="emailModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Email details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 DefenderSim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/emailData.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
